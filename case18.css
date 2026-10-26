@@ -1,0 +1,392 @@
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #173b35;
+}
+
+section {
+    padding: 60px 8%;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #173b35;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.navbar h1 {
+    font-size: 28px;
+    color: #e5c17b;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #e5c17b;
+}
+
+/* Hero Banner */
+.hero {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55),
+                        rgba(0, 0, 0, 0.55)),
+        url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=85");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content h2 {
+    color: white;
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #c49a4a;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #173b35;
+    transform: translateY(-2px);
+}
+
+/* Booking Section */
+.booking {
+    background-color: white;
+}
+
+.booking-form {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    align-items: end;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label,
+.reservation-form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: white;
+}
+
+.booking-form .btn {
+    grid-column: 1 / -1;
+}
+
+/* Room Cards */
+.rooms {
+    text-align: center;
+}
+
+.section-subtitle {
+    margin-bottom: 35px;
+    color: #666;
+}
+
+.room-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.room-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: left;
+}
+
+.room-card:hover {
+    transform: translateY(-8px);
+}
+
+.room-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.room-info {
+    padding: 22px;
+}
+
+.room-info h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: #173b35;
+}
+
+.room-info p {
+    margin-bottom: 12px;
+    color: #666;
+}
+
+.room-info .features {
+    color: #8b713c;
+    font-size: 14px;
+}
+
+.room-info h4 {
+    color: #b18435;
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.room-info h4 span {
+    color: #777;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Facilities */
+.facilities {
+    background-color: #eaf0ed;
+}
+
+.facility-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.facility-card {
+    background-color: white;
+    padding: 30px 18px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.facility-card span {
+    font-size: 40px;
+}
+
+.facility-card h3 {
+    color: #173b35;
+    margin: 12px 0;
+}
+
+.facility-card p {
+    color: #666;
+}
+
+/* Reservation Form */
+.reservation {
+    background-color: white;
+    text-align: center;
+}
+
+.reservation > p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.reservation-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f8f8f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+    margin-bottom: 18px;
+}
+
+.reservation-form textarea {
+    resize: vertical;
+}
+
+.reservation-form .btn {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Keyboard Accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #c49a4a;
+    outline-offset: 3px;
+}
+
+/* Footer */
+footer {
+    background-color: #173b35;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h2 {
+    color: #e5c17b;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+.copyright {
+    border-top: 1px solid #506a64;
+    margin-top: 20px !important;
+    padding-top: 18px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .room-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .facility-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .booking-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    section {
+        padding: 40px 5%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+    .hero {
+        height: 380px;
+    }
+
+    .hero-content h2 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    .room-container,
+    .facility-container,
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+
+    .room-card img {
+        height: 220px;
+    }
+
+    .reservation-form {
+        padding: 20px;
+    }
+}
